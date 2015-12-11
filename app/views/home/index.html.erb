@@ -1,2 +1,10 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<h2>Welcome to Wish Lists!</h2>
+<h3>Where all your dreams come true.</h3>
+
+<% if current_user.lists.any? %>
+<% else %>
+<% end %>
+
+<%= link_to 'View Profile', users_show_path %>
+<%= link_to 'Edit Profile', edit_user_registration_path %>
+<%= link_to 'Logout', destroy_user_session_path, method: :delete %>

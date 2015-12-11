@@ -1,0 +1,28 @@
+<h2>My Profile</h2>
+  <div class="field">
+    First Name: <br />
+    <%= current_user.first_name %>
+  </div>
+
+  <div class="field">
+   Last Name: <br />
+    <%= current_user.last_name %>
+  </div>
+
+  <div class="field">
+    Email: <br />
+    <%= current_user.email %>
+  </div>
+
+  <div class="field">
+    Birthday: <br />
+    <%= current_user.birthday %>
+  </div>
+
+  <div class="field">
+    Families: <br />
+  </div>
+
+<%= link_to 'Home', root_path %>
+<%= link_to 'Edit Profile', edit_user_registration_path %>
+<%= link_to 'Logout', destroy_user_session_path, method: :delete %>
